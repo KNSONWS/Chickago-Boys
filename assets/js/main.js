@@ -340,25 +340,45 @@
     placeRider(0);
   }
 
-  /* ---- Footer: jonglierende Zutaten ---- */
+  /* ---- Footer: Zutaten fliegen von unten ins Bild und fallen wieder raus ---- */
   var jug = $('[data-juggle]');
   if (jug) {
-    var spots = [9, 33, 60, 84];
-    var tls = $$('.juggle', jug).map(function (el, i) {
-      el.style.left = spots[i % spots.length] + '%';
-      var apex = function () { return -Math.min(320, window.innerWidth * rand(.12, .22)); };
-      var t = gsap.timeline({ repeat: -1, repeatRefresh: true, delay: i * .35, paused: true });
-      t.to(el, { y: apex, rotation: function () { return '+=' + rand(180, 520); }, x: function () { return rand(-30, 30); }, duration: function () { return rand(.8, 1.1); }, ease: 'power2.out' })
-       .to(el, { y: 0, duration: function () { return rand(.7, .95); }, ease: 'power2.in' })
-       .to(el, { duration: function () { return rand(.15, .7); } });
-      return t;
+    var foot = jug.closest('footer') || jug;
+    var G = 1100; // Schwerkraft in px/s², hält Flugkurve und -zeit realistisch
+    var running = false;
+    // Versatz, ab dem eine Zutat (auch gedreht) komplett unter dem Footer-Rand steckt
+    var below = function (el) {
+      return foot.getBoundingClientRect().bottom - jug.getBoundingClientRect().top - el.offsetTop + el.offsetHeight * .3 + 2;
+    };
+    var toss = function (item, wait) {
+      var el = item.el;
+      var low = below(el);
+      var apex = -Math.min(window.innerHeight * .55, Math.max(jug.offsetHeight, 110) * rand(.8, 1.25) + 20);
+      var dir = Math.random() < .5 ? -1 : 1;
+      var drift = window.innerWidth * rand(.03, .08) * dir;
+      var rot = rand(-30, 30);
+      var up = Math.sqrt(2 * (low - apex) / G);
+      item.tl = gsap.timeline({ delay: wait, paused: !running, onComplete: function () { toss(item, rand(.15, .8)); } })
+        .fromTo(el, { y: low }, { y: apex, duration: up, ease: 'power2.out' })
+        .to(el, { y: low, duration: up, ease: 'power2.in' })
+        .fromTo(el, { x: -drift / 2, rotation: rot }, { x: drift / 2, rotation: rot + dir * rand(200, 480), duration: up * 2, ease: 'none' }, 0);
+    };
+    var items = $$('.juggle', jug).map(function (el, i) {
+      var item = { el: el, tl: null };
+      gsap.set(el, { y: below(el), visibility: 'visible' });
+      toss(item, .1 + i * .3);
+      return item;
     });
+    var setRunning = function (on) {
+      running = on;
+      items.forEach(function (it) { on ? it.tl.play() : it.tl.pause(); });
+    };
     ST.create({
       trigger: jug, start: 'top bottom', end: 'bottom top',
-      onToggle: function (self) { tls.forEach(function (t) { self.isActive ? t.play() : t.pause(); }); }
+      onToggle: function (self) { setRunning(self.isActive); }
     });
     document.addEventListener('visibilitychange', function () {
-      tls.forEach(function (t) { document.hidden ? t.pause() : (ST.isInViewport(jug) && t.play()); });
+      setRunning(!document.hidden && ST.isInViewport(jug));
     });
   }
 

@@ -576,7 +576,11 @@ body.menu-open .menu-panel { transform: scale(1); opacity: 1; visibility: visibl
 .footer__giant { position: relative; margin-top: clamp(2.5rem, 6vw, 5rem); height: calc(94vw / 4.714 + 3vw); }
 .footer__giant .wm-giant { position: absolute; left: 50%; bottom: 2vw; width: 94vw; transform: translateX(-50%); color: var(--red); }
 .footer__giant .wm-giant svg { width: 100%; height: auto; filter: drop-shadow(0 0 0 var(--cream)); }
-.juggle { position: absolute; bottom: 12%; width: clamp(48px, 6vw, 92px); z-index: 2; will-change: transform; }
+.juggle { position: absolute; bottom: 12%; width: clamp(48px, 6vw, 92px); z-index: 2; pointer-events: none; will-change: transform; }
+.juggle:nth-of-type(1) { left: 9%; }
+.juggle:nth-of-type(2) { left: 33%; }
+.juggle:nth-of-type(3) { left: 60%; }
+.juggle:nth-of-type(4) { left: 84%; }
 .juggle svg { width: 100%; height: auto; }
 
 /* ============ Mobile order bar ============ */
@@ -728,6 +732,7 @@ html.js.anim [data-reveal] { opacity: 0; translate: 0 var(--ry, 40px); }
 [data-sticker] { scale: var(--s, 1); }
 html.js.anim [data-sticker] { --s: 0; }
 html.js.anim .hero [data-intro] { opacity: 0; }
+html.js.anim .juggle { visibility: hidden; }
 .hero__big .pl, .page-hero .pl { will-change: transform; }
 
 @media (prefers-reduced-motion: reduce) {
