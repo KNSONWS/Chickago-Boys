@@ -6,7 +6,7 @@ Stand: 01.10.2026
 
 | Datei / Ordner | Inhalt |
 |---|---|
-| [gemini-prompts.md](gemini-prompts.md) | **Für die Gemini-App:** alle 59 Prompts mit Gemini-Anleitung in einer Datei |
+| [gemini-prompts.md](gemini-prompts.md) | **Hauptdatei für die Gemini-App:** alle 59 Prompts mit Anleitung, Korrektursätzen und Steingut-Anker |
 | [prompts.md](prompts.md) | 59 fertige Prompts, einer pro Gericht, in Generier-Reihenfolge. Zu jedem steht, welche Bilder angehängt werden und wo das Ergebnis gespeichert wird. |
 | `eingabe/` | 14 vorbereitete Ausgangsfotos: quadratisch, Logo und Gäste weggeschnitten, Freisteller auf Hintergrundgrau gesetzt |
 | `bilder-holen.sh` | lädt die 5 Getränkebilder (und 4 kleine Menüfotos) von Lieferando und Uber Eats |
@@ -40,28 +40,20 @@ sh bilder-upscale/generieren/bilder-holen.sh
 - **Modell:** Nano Banana Pro (`gemini-3-pro-image`)
 - **Seitenverhältnis:** 1:1
 - **Auflösung:** 4K. Wird das Kontingent knapp, reicht für Dips und Getränke 2K.
-- **Für jedes Gericht einen neuen Chat.** Ausnahme sind Start und Anker (Schritt 2), die laufen im selben Chat.
+- **Für jedes Gericht einen neuen Chat.** Ausnahme sind US Burger und Steingut-Anker (Schritt 2), die laufen im selben Chat.
 
-## Schritt 2: Start und Anker
+## Schritt 2: Start und Steingut-Anker
+
+**Look:** Jedes Gericht steht auf rein weißer Fläche vor rein weißem Hintergrund und hat einen weichen, gut sichtbaren grauen Kontaktschatten. Es gibt kein Holzbrett.
 
 1. Prompt **1. US Burger** aus [prompts.md](prompts.md) mit dem angegebenen Ausgangsfoto ausführen.
 2. Im selben Chat nachbessern („Keep everything the same, but …“), bis alles passt:
-   - Brett waagerecht, Enden knapp außerhalb des Bildes
-   - Kamera 30° über dem Brett
+   - Hintergrund rein weiß bis in die Ecken
+   - Schatten weich und grau
+   - Kamera 30° über der Fläche
    - Burger etwa 70 % der Bildbreite
-   - Hintergrund gleichmäßig hellgrau
-   - Licht weich von links vorn
-3. Speichern als `bilder-upscale/bearbeitet/04-beef-burger/01-us-burger.png`.
-4. **Anker A**, im selben Chat:
-   ```
-   Using the provided image, remove only the burger. Keep the board, backdrop, light, camera angle and framing exactly the same, so that the empty board remains. Aspect ratio 1:1.
-   ```
-   Speichern als `bilder-upscale/bearbeitet/_anker/anker-a-brett.png`.
-5. **Anker B**, im selben Chat, auf Anker A aufbauend:
-   ```
-   Keep everything exactly the same, but place one empty square stoneware baking dish with low straight sides, rounded corners and a small loop handle on the left and right side, centred on the board, handles pointing left and right, filling about 70 percent of the image width. Glaze: pale grey with a faint blue-green tint and fine dark-brown speckles; the rim is glazed caramel brown. Aspect ratio 1:1.
-   ```
-   Speichern als `bilder-upscale/bearbeitet/_anker/anker-b-schale.png`.
+3. Speichern als `bilder-upscale/bearbeitet/04-beef-burger/01-us-burger.png`. Dieses Bild ist die Stil-Vorlage (Image 2) für alle Gerichte ohne Gefäß.
+4. **Steingut-Anker**, im selben Chat. Den Prompt findest du in [gemini-prompts.md](gemini-prompts.md) unter „Steingut-Anker“. Speichern als `bilder-upscale/bearbeitet/_anker/anker-schale.png`. Das ist die Vorlage für alle Gerichte in Schale oder Schälchen.
 
 ## Schritt 3: Alle Gerichte der Reihe nach
 
@@ -74,29 +66,17 @@ Für jedes Gericht in [prompts.md](prompts.md):
    - **Zutaten:** stimmen sie mit der Beschreibung im Prompt überein, ohne Dip und ohne Deko?
    - **Stückzahl:** nachzählen.
    - **Saucenfarbe:** passt sie?
-   - **Set:** Brett, Winkel, Größe und Hintergrund wie beim Anker?
-5. Weicht etwas ab, im selben Chat gezielt nachbessern. Die fertigen Sätze dafür stehen im Leitfaden, Abschnitt 10. Nach 2–3 Korrekturen lieber einen neuen Chat starten.
+   - **Set:** Hintergrund rein weiß, Schatten weich und grau, Winkel und Größe wie beim US Burger?
+5. Weicht etwas ab, im selben Chat gezielt nachbessern. Die fertigen Sätze dafür stehen in [gemini-prompts.md](gemini-prompts.md) unter „Korrektursätze“. Nach 2–3 Korrekturen lieber einen neuen Chat starten.
 6. Unter dem angegebenen Pfad in `bilder-upscale/bearbeitet/` speichern.
 
 Die Reihenfolge in [prompts.md](prompts.md) ist wichtig: Spätere Gerichte nutzen frühere, freigegebene Bilder als Vorlage. Ein Beispiel: Die Saucen-Tenders bauen auf den Tenders auf, alle Dips auf dem Ranch-Dip, der Bucket auf Wings und Cola.
 
 Etwa alle 10 Bilder lohnt ein Blick auf alle zusammen. Ausreißer bei Helligkeit, Winkel oder Größe fallen dann sofort auf.
 
-## Schritt 4: Freisteller für die Speisekarte
+## Schritt 4: Freistellen
 
-Die Website zeigt die Gerichte freigestellt. Für jedes fertige Gericht:
-
-1. Neuen Chat öffnen und **nur das fertige Brett-Foto** anhängen.
-2. Diesen Prompt nehmen, `[DISH NAME]` durch den Namen aus dem Gericht-Prompt ersetzen:
-   ```
-   Using the provided photo of "[DISH NAME]", keep the food exactly the same (same pieces, shape, colours, light, camera angle and size in the frame), together with its stoneware if there is any. Change only the surroundings: replace the wooden board and the studio backdrop with one flat, uniform, saturated chroma-key blue (#0047BB) that fills the entire frame from edge to edge. The blue is evenly lit, without shadow, gradient, texture or reflections; the underside of the food meets it with a crisp edge. The food keeps its neutral studio light: highlights stay white and every colour stays exactly as in the provided photo, with no blue tint or blue reflection on the food. The whole dish is in frame with at least 10 percent clear blue on every side. Aspect ratio 1:1.
-   ```
-3. Das Blau im Bildprogramm entfernen, z. B. in Photoshop über „Auswahl > Farbbereich“.
-4. Speichern als `bilder-upscale/bearbeitet/<kategorie>/cut-<name>.png`, mit Transparenz.
-
-Ausnahmen:
-- **Red Bull:** Die Dose ist blau, deshalb hier Magenta `#FF00FF` statt Blau nehmen.
-- **Durchsichtige Flaschen:** von Hand freistellen.
+Entfällt. Die Bilder haben einen rein weißen Hintergrund. Das Weiß blende ich auf der Website per CSS aus (`mix-blend-mode: multiply`), der graue Schatten bleibt dabei sichtbar. Für rote, gelbe und schwarze Flächen erzeuge ich daraus automatisch echte Freisteller mit Transparenz. Einzige Aufgabe: das Gemini-Funkeln unten rechts mit Weiß übermalen, falls es im Bild ist.
 
 ## Schritt 5: Abgeben
 

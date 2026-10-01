@@ -2,6 +2,8 @@
 
 Stand: 01.10.2026
 
+> **Geändert am 01.10.2026:** Der Look ist jetzt **weißer Hintergrund mit grauem Kontaktschatten statt Holzbrett**. Freigestellt wird per CSS auf der Website. Die gültigen Prompts stehen in [generieren/gemini-prompts.md](generieren/gemini-prompts.md) (Gemini-App) und [generieren/prompts.md](generieren/prompts.md). Die Abschnitte unten zu Brett, Hintergrundgrau und Blau-Freisteller sind damit überholt. Modellwahl, Saucen-Formulierungen und Beschreibungsregeln gelten weiter.
+
 ## 1. Modell, Ort und Einstellungen
 
 **Empfohlenes Modell: Nano Banana Pro**, offiziell Gemini 3 Pro Image (`gemini-3-pro-image`). Laut Google-Doku ist es „the premium choice for the most complex visual tasks“. Nur für Pro führt die Doku eine eigene Kategorie „Up to 3 images to be used as style references“, dazu kommen bis zu 6 Objektbilder. Darauf baut dieser Leitfaden auf: Ein leeres Set-Foto (Anker) legt Brett, Hintergrund, Licht und Winkel fest.
