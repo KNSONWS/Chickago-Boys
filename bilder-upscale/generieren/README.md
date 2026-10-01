@@ -6,6 +6,7 @@ Stand: 01.10.2026
 
 | Datei / Ordner | Inhalt |
 |---|---|
+| [gemini-prompts.md](gemini-prompts.md) | **Für die Gemini-App:** alle 59 Prompts mit Gemini-Anleitung in einer Datei |
 | [prompts.md](prompts.md) | 59 fertige Prompts, einer pro Gericht, in Generier-Reihenfolge. Zu jedem steht, welche Bilder angehängt werden und wo das Ergebnis gespeichert wird. |
 | `eingabe/` | 14 vorbereitete Ausgangsfotos: quadratisch, Logo und Gäste weggeschnitten, Freisteller auf Hintergrundgrau gesetzt |
 | `bilder-holen.sh` | lädt die 5 Getränkebilder (und 4 kleine Menüfotos) von Lieferando und Uber Eats |
