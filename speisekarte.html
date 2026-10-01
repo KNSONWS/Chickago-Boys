@@ -16,7 +16,7 @@
   <meta property="og:image" content="assets/img/og-image.jpg">
   <link rel="preload" href="assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/titan-one-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/img/cut-steakhouse-burger.webp" as="image" type="image/webp">
+  <link rel="preload" href="assets/img/menu/steakhouse-burger.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>
     (function (d) {
@@ -80,7 +80,7 @@
         <h1 class="display stroke" id="page-title" data-hero-big>Die Karte</h1>
         <p class="lead">Wings, Tenders, Burger, Wraps und Sides – alles mild oder scharf, zum Mitnehmen, geliefert oder direkt bei uns.</p>
       </div>
-      <div class="page-hero__img"><img src="assets/img/cut-steakhouse-burger.webp" width="900" height="669" alt="Steakhouse Burger mit Pepper-Jack-Käse und Bacon"></div>
+      <div class="page-hero__img"><img class="shot" src="assets/img/menu/steakhouse-burger.webp" width="834" height="526" alt="Steakhouse Burger mit Pepper-Jack-Käse und Bacon"></div>
       <span class="sticker sticker--red page-hero__st" data-sticker>Mild oder<br>scharf?</span>
     </section>
 
@@ -106,31 +106,36 @@
           <h2 class="display stroke" id="h-chicken" data-pop>Chicken</h2>
           <p>Alle Chicken-Gerichte bekommst du im Schärfegrad deiner Wahl: <strong>mild oder scharf</strong> – ohne Aufpreis.</p>
         </div>
-        <div class="dish-grid">
+        <div class="dish-grid dish-grid--4">
           <article class="dish" data-reveal>
             <h3 class="dish__name">Chicken Wings</h3>
-            <div class="dish__media"><img src="assets/img/cut-chicken-wings.webp" width="1000" height="813" loading="lazy" alt="Knusprige Chicken Wings"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/chicken-wings.webp" width="916" height="366" loading="lazy" alt="Zehn knusprige Chicken Wings"></div>
             <div class="dish__body"><p>Knusprig, mit Sauce nach Wahl.</p><div class="variants"><span>6 Stück · 8,50 €</span><span>10 Stück · 11,00 €</span><span>20 Stück · 22,00 €</span></div></div>
           </article>
           <article class="dish" data-reveal>
             <h3 class="dish__name">Buffalo Red Hot Wings</h3>
-            <div class="dish__media"><img src="assets/img/cut-buffalo-wings.webp" width="800" height="784" loading="lazy" alt="Buffalo Red Hot Wings mit Dip"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/buffalo-red-hot-wings.webp" width="916" height="535" loading="lazy" alt="Buffalo Red Hot Wings in der Steingutschale"></div>
             <div class="dish__body"><p>10 Stück, in Buffalo-Red-Hot-Sauce.</p><span class="price">14,00 €</span></div>
           </article>
           <article class="dish" data-reveal>
             <h3 class="dish__name">Chipotle Honey BBQ Wings</h3>
-            <div class="dish__media"><img src="assets/img/cut-bbq-wings.webp" width="800" height="830" loading="lazy" alt="Chipotle Honey BBQ Wings mit Dip"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/chipotle-honey-bbq-wings.webp" width="916" height="491" loading="lazy" alt="Chipotle Honey BBQ Wings in der Steingutschale"></div>
             <div class="dish__body"><p>10 Stück, in Chipotle-Honey-BBQ-Sauce.</p><span class="price">14,00 €</span></div>
           </article>
           <article class="dish" data-reveal>
             <h3 class="dish__name">Teriyaki Wings</h3>
-            <div class="dish__media"><img src="assets/img/cut-teriyaki-wings.webp" width="800" height="789" loading="lazy" alt="Teriyaki Wings mit Dip"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/teriyaki-wings.webp" width="916" height="591" loading="lazy" alt="Teriyaki Wings in der Steingutschale"></div>
             <div class="dish__body"><p>10 Stück, in Teriyaki-Sauce.</p><span class="price">14,00 €</span></div>
           </article>
           <article class="dish" data-reveal>
             <h3 class="dish__name">Sweet Chili Wings</h3>
-            <div class="dish__media"><img src="assets/img/cut-sweet-chili-wings.webp" width="800" height="709" loading="lazy" alt="Sweet Chili Wings mit Dip"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/sweet-chili-wings.webp" width="916" height="528" loading="lazy" alt="Sweet Chili Wings in der Steingutschale"></div>
             <div class="dish__body"><p>10 Stück, in Sweet-Chili-Sauce.</p><span class="price">14,00 €</span></div>
+          </article>
+          <article class="dish" data-reveal>
+            <h3 class="dish__name">Crispy-Chicken Tenders</h3>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/crispy-chicken-tenders-5-stueck.webp" width="911" height="378" loading="lazy" alt="Fünf knusprig panierte Crispy-Chicken Tenders"></div>
+            <div class="dish__body"><p>Knusprig panierte Hähnchenfilets.</p><div class="variants"><span>5 Stück · 9,50 €</span><span>10 Stück · 17,00 €</span></div></div>
           </article>
           <article class="dish dish--special dish--promo" data-reveal>
             <span class="dish__kicker">Für die ganze Crew</span>
@@ -140,8 +145,6 @@
           </article>
         </div>
         <div class="dish-list">
-          <div class="item"><div class="item__row"><h3>Crispy-Chicken Tenders&nbsp;· 5&nbsp;Stück</h3><span class="item__dots"></span><span class="item__price">9,50 €</span></div><p>Knusprig panierte Hähnchenfilets.</p></div>
-          <div class="item"><div class="item__row"><h3>Crispy-Chicken Tenders&nbsp;· 10&nbsp;Stück</h3><span class="item__dots"></span><span class="item__price">17,00 €</span></div><p>Knusprig panierte Hähnchenfilets.</p></div>
           <div class="item"><div class="item__row"><h3>Buffalo Red Hot Tenders&nbsp;· 5&nbsp;Stück</h3><span class="item__dots"></span><span class="item__price">11,50 €</span></div><p>In Buffalo-Red-Hot-Sauce.</p></div>
           <div class="item"><div class="item__row"><h3>Chipotle Honey BBQ Tenders&nbsp;· 5&nbsp;Stück</h3><span class="item__dots"></span><span class="item__price">11,50 €</span></div><p>In Chipotle-Honey-BBQ-Sauce.</p></div>
           <div class="item"><div class="item__row"><h3>Teriyaki Tenders&nbsp;· 5&nbsp;Stück</h3><span class="item__dots"></span><span class="item__price">11,50 €</span></div><p>In Teriyaki-Sauce.</p></div>
@@ -157,7 +160,7 @@
         <div class="cat-split">
           <article class="dish dish--special" data-reveal>
             <h3 class="dish__name"><span class="dish__script dish__script--long">Chicken Home Style</span> Honey Mustard Bacon</h3>
-            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img src="assets/img/cut-chicken-honey-mustard.webp" width="900" height="734" loading="lazy" alt="Chicken Burger Home Style mit Honey Mustard und Bacon"></div>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img class="shot" src="assets/img/menu/chicken-home-style-honey-mustard-bacon.webp" width="874" height="637" loading="lazy" alt="Chicken Burger Home Style mit Honey Mustard und Bacon"></div>
             <div class="dish__body"><p>Cheddar, Bacon, Tomaten, Zwiebeln, Salat, Honey-Mustard-Soße.</p><span class="price">12,50 €</span></div>
           </article>
           <div>
@@ -180,12 +183,12 @@
         <div class="dish-grid dish-grid--4">
           <article class="dish dish--special" data-reveal>
             <h3 class="dish__name"><span class="dish__script dish__script--the" aria-hidden="true">The</span> US Burger</h3>
-            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img src="assets/img/cut-us-burger.webp" width="774" height="760" loading="lazy" alt="US Burger mit Ei und Bacon"></div>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img class="shot" src="assets/img/menu/us-burger.webp" width="853" height="616" loading="lazy" alt="US Burger mit Ei und Bacon"></div>
             <div class="dish__body"><p>Cheddar, Ei, Bacon, karamellisierte Zwiebeln, BBQ-Soße.</p><span class="price">13,50 €</span></div>
           </article>
           <article class="dish dish--special" data-reveal>
             <h3 class="dish__name"><span class="dish__script">Steakhouse</span> Burger</h3>
-            <div class="dish__media"><img src="assets/img/cut-steakhouse-burger.webp" width="900" height="669" loading="lazy" alt="Steakhouse Burger"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/steakhouse-burger.webp" width="834" height="526" loading="lazy" alt="Steakhouse Burger"></div>
             <div class="dish__body"><p>Pepper-Jack-Käse, Bacon, karamellisierte Zwiebeln, Steakhouse-Soße.</p><span class="price">13,50 €</span></div>
           </article>
           <article class="dish" data-reveal>
@@ -195,7 +198,7 @@
           </article>
           <article class="dish" data-reveal>
             <h3 class="dish__name">Hamburger</h3>
-            <div class="dish__media"><img src="assets/img/cut-hamburger.webp" width="900" height="648" loading="lazy" alt="Hamburger"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/hamburger.webp" width="824" height="499" loading="lazy" alt="Hamburger"></div>
             <div class="dish__body"><p>Karamellisierte Zwiebeln, Ketchup, Mayonnaise.</p><span class="price">11,50 €</span></div>
           </article>
         </div>
@@ -232,7 +235,7 @@
         <div class="cat-split">
           <article class="dish" data-reveal>
             <h3 class="dish__name">Chicken Wrap Chickago-Boys</h3>
-            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img src="assets/img/cut-chicken-wrap.webp" width="800" height="800" loading="lazy" alt="Chicken Wrap Chickago-Boys, aufgeschnitten"></div>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img class="shot" src="assets/img/menu/chicken-wrap-chickago-boys.webp" width="812" height="546" loading="lazy" alt="Chicken Wrap Chickago-Boys, aufgeschnitten"></div>
             <div class="dish__body"><p>2 knusprige Crispy-Filets, Cheddar, Tomaten, Salat, hausgemachte Sauce.</p><span class="price">9,50 €</span></div>
           </article>
           <div class="dish-list">
@@ -260,24 +263,42 @@
           <h2 class="display stroke" id="h-beilagen" data-pop>Beilagen</h2>
           <p>Der perfekte Sidekick für Wings und Burger.</p>
         </div>
-        <div class="dish-grid dish-grid--2">
+        <div class="dish-grid dish-grid--4">
           <article class="dish" data-reveal>
             <h3 class="dish__name">Jalapeños Chili Cheese Fries</h3>
-            <div class="dish__media"><img src="assets/img/cut-chili-cheese-fries.webp" width="700" height="700" loading="lazy" alt="Jalapeños Chili Cheese Fries"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/jalapenos-chili-cheese-fries.webp" width="916" height="839" loading="lazy" alt="Jalapeños Chili Cheese Fries"></div>
             <div class="dish__body"><p>Pommes mit Chili-Käse-Sauce und Jalapeños.</p><span class="price">7,00 €</span></div>
           </article>
           <article class="dish" data-reveal>
             <h3 class="dish__name">Cheesy Bacon Fries</h3>
-            <div class="dish__media"><img src="assets/img/cut-cheesy-bacon-fries.webp" width="700" height="700" loading="lazy" alt="Cheesy Bacon Fries"></div>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/cheesy-bacon-fries.webp" width="916" height="609" loading="lazy" alt="Cheesy Bacon Fries"></div>
             <div class="dish__body"><p>Pommes mit Käse und Bacon.</p><span class="price">7,00 €</span></div>
           </article>
-        </div>
-        <div class="dish-list">
-          <div class="item"><div class="item__row"><h3>Pommes frites</h3><span class="item__dots"></span><span class="item__price">4,00 €</span></div></div>
-          <div class="item"><div class="item__row"><h3>Süßkartoffel-Pommes <span class="tag">Beliebt</span></h3><span class="item__dots"></span><span class="item__price">5,00 €</span></div></div>
-          <div class="item"><div class="item__row"><h3>Onion Rings</h3><span class="item__dots"></span><span class="item__price">6,00 €</span></div></div>
-          <div class="item"><div class="item__row"><h3>Mozzarella Sticks</h3><span class="item__dots"></span><span class="item__price">7,00 €</span></div></div>
-          <div class="item"><div class="item__row"><h3>Krautsalat</h3><span class="item__dots"></span><span class="item__price">4,00 €</span></div><p>Weißkohl, Rotkohl.</p></div>
+          <article class="dish" data-reveal>
+            <h3 class="dish__name">Pommes frites</h3>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/pommes-frites.webp" width="916" height="578" loading="lazy" alt="Pommes frites in der Steingutschale"></div>
+            <div class="dish__body"><span class="price">4,00 €</span></div>
+          </article>
+          <article class="dish" data-reveal>
+            <h3 class="dish__name">Süßkartoffel-Pommes</h3>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img class="shot" src="assets/img/menu/suesskartoffel-pommes.webp" width="916" height="516" loading="lazy" alt="Süßkartoffel-Pommes in der Steingutschale"></div>
+            <div class="dish__body"><span class="price">5,00 €</span></div>
+          </article>
+          <article class="dish" data-reveal>
+            <h3 class="dish__name">Onion Rings</h3>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/onion-rings.webp" width="916" height="410" loading="lazy" alt="Knusprige Onion Rings"></div>
+            <div class="dish__body"><span class="price">6,00 €</span></div>
+          </article>
+          <article class="dish" data-reveal>
+            <h3 class="dish__name">Mozzarella Sticks</h3>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/mozzarella-sticks.webp" width="850" height="419" loading="lazy" alt="Knusprige Mozzarella Sticks"></div>
+            <div class="dish__body"><span class="price">7,00 €</span></div>
+          </article>
+          <article class="dish" data-reveal>
+            <h3 class="dish__name">Krautsalat</h3>
+            <div class="dish__media"><img class="shot" src="assets/img/menu/krautsalat.webp" width="820" height="569" loading="lazy" alt="Krautsalat aus Weiß- und Rotkohl im Schälchen"></div>
+            <div class="dish__body"><p>Weißkohl, Rotkohl.</p><span class="price">4,00 €</span></div>
+          </article>
         </div>
       </section>
 

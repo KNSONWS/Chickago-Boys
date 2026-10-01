@@ -13,6 +13,7 @@ Preview: https://chickago-boys.project.webklar.com (Deploy über den Org-Webhook
 | `assets/css/style.css` | Design-System (Farben, Typo, Komponenten) |
 | `assets/js/main.js` | Öffnungsstatus, Menü, Animationen (GSAP + ScrollTrigger, Lenis) |
 | `assets/img/` | Logo als Vektor (`rooster.svg`, `wordmark.svg`), Food-Freisteller `cut-*.webp`, Fotos `foto-*.webp` |
+| `assets/img/menu/` | Neue Speisenfotos (mit Gemini generiert, automatisch freigestellt, Kontaktschatten bleibt erhalten). Originale in `bilder-upscale/bearbeitet/` |
 | `assets/fonts/` | Anton, Titan One, Archivo, Archivo Expanded Black, Great Vibes, IBM Plex Mono – lokal eingebunden (keine Google-Verbindung) |
 
 Kein Build-Schritt, keine Cookies, keine Tracker, keine externen Einbindungen. Karten, Instagram und Lieferando sind nur verlinkt.
