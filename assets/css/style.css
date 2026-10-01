@@ -664,6 +664,7 @@ body.nav-visible .cat-nav { top: var(--nav-h); }
 .dish {
   --sq: 12px;
   --pad-x: clamp(1rem, 2vw, 1.4rem);
+  --media-h: clamp(220px, min(22vw, calc(.92 * (100cqi + 2 * var(--pad-x)))), 300px);
   --checker: conic-gradient(var(--red) 25%, var(--white) 0 50%, var(--red) 0 75%, var(--white) 0);
   position: relative; display: flex; flex-direction: column; align-items: center; text-align: center;
   container-type: inline-size;
@@ -689,7 +690,7 @@ body.nav-visible .cat-nav { top: var(--nav-h); }
 /* Fotobereich so groß wie vorher: volle Kartenbreite; die Höhe endet dort, wo auch das höchste Foto nicht mehr wachsen würde */
 .dish__media {
   position: relative; width: calc(100% + 2 * var(--pad-x)); margin: .4rem calc(-1 * var(--pad-x)) .2rem;
-  height: clamp(220px, min(22vw, calc(.92 * (100cqi + 2 * var(--pad-x)))), 300px);
+  height: var(--media-h);
 }
 .dish__media img { position: absolute; z-index: 1; left: 11%; top: 6%; width: 78%; height: 88%; object-fit: contain; filter: drop-shadow(0 16px 16px rgba(21, 13, 12, .25)); transition: transform .7s var(--ease-pop); }
 .dish:hover .dish__media img { transform: scale(1.06) rotate(-2deg); }
@@ -711,7 +712,7 @@ body.nav-visible .cat-nav { top: var(--nav-h); }
   box-shadow: 0 14px 32px rgba(140, 10, 6, .28);
 }
 .dish--special:hover { box-shadow: 0 24px 44px rgba(140, 10, 6, .36); background-position: 0 0, 0 0; }
-.dish--special .dish__name { color: var(--cream); font-size: clamp(1.6rem, 12.5cqi, 3.6rem); line-height: .9; }
+.dish--special .dish__name { color: var(--cream); font-size: clamp(1.35rem, 12.5cqi, 3.6rem); line-height: .9; }
 .dish__script {
   display: block; position: relative; z-index: 1;
   font-family: var(--f-script); font-weight: 400; text-transform: none; letter-spacing: 0;
@@ -720,8 +721,10 @@ body.nav-visible .cat-nav { top: var(--nav-h); }
 }
 .dish__script--the { font-size: clamp(3rem, 22cqi, 5.5rem); margin-bottom: -.3em; }
 .dish__script--long { font-size: clamp(1.9rem, 12cqi, 3.6rem); white-space: nowrap; }
-.dish--special .dish__media { margin-top: -.5rem; z-index: 1; }
-.dish--special .dish__media img { top: 0; object-position: 50% 0; }
+/* Foto direkt unter dem Namen (leicht überlappend wie auf dem Plakat), gleiche Größe wie bei Standard-Karten */
+.dish--special .dish__media { margin-top: -.5rem; z-index: 1; height: auto; }
+.dish--special .dish__media img { position: relative; display: block; left: auto; top: auto; width: auto; height: auto; max-width: 78%; max-height: calc(.88 * var(--media-h)); margin: 0 auto; }
+.dish--special .dish__body > p { margin-top: auto; }
 .dish--special p, .dish__kicker {
   font-family: var(--f-mono); text-transform: uppercase; font-size: .78rem; line-height: 1.6;
   letter-spacing: .14em; word-spacing: .25em; opacity: .95;
