@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chickago Boys – Fried Chicken &amp; Burger in Kaiserslautern</title>
+  <meta name="description" content="Knusprige Chicken Wings, Crispy Tenders und Burger in der Merkurstraße 13 in Kaiserslautern. Vor Ort essen, abholen oder liefern lassen. Täglich 12–22 Uhr.">
+  <meta name="theme-color" content="#e0140e">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Chickago Boys">
+  <meta property="og:title" content="Chickago Boys – Fried Chicken &amp; Burger in Kaiserslautern">
+  <meta property="og:description" content="Wings, Crispy Tenders und Burger in der Merkurstraße 13. Vor Ort, zum Abholen oder geliefert.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <link rel="preload" href="assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/titan-one-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/cut-us-burger.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function (d) {
+      var h = d.documentElement; h.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('anim');
+      setTimeout(function () { if (!window.gsap) h.classList.remove('anim'); }, 2500);
+    })(document);
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Chickago Boys Fried Chicken & Burger",
+    "alternateName": "Chickago Boys",
+    "description": "Fried Chicken, Chicken Wings, Crispy Tenders und Burger – Bar & Restaurant in Kaiserslautern.",
+    "servesCuisine": ["Amerikanisch", "Fried Chicken", "Burger", "Chicken Wings"],
+    "priceRange": "€€",
+    "telephone": "+49 631 3107985",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Merkurstraße 13",
+      "postalCode": "67663",
+      "addressLocality": "Kaiserslautern",
+      "addressRegion": "Rheinland-Pfalz",
+      "addressCountry": "DE"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 49.4434292, "longitude": 7.7302276 },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "12:00",
+      "closes": "22:00"
+    }],
+    "hasMenu": "speisekarte.html",
+    "sameAs": [
+      "https://www.instagram.com/chickago_boys/",
+      "https://www.facebook.com/p/Chickago-Boys-61554599980010/",
+      "https://www.lieferando.de/speisekarte/chickago-boys"
+    ]
+  }
+  </script>
+  <script src="assets/js/gsap.min.js" defer></script>
+  <script src="assets/js/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Zm3 0V6.5a4 4 0 0 1 8 0V8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6.6 3.5h2.8l1.4 4.2-2 1.5a12 12 0 0 0 6 6l1.5-2 4.2 1.4v2.8a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4a21 21 0 0 0-2.3-.1c-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html" aria-label="Chickago Boys – Startseite">
+      <img src="assets/img/rooster.svg" alt="" width="40" height="58">
+      <span class="wm wm-mask" aria-hidden="true"></span>
+    </a>
+    <div class="nav__actions">
+      <a class="pill pill--red" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">
+        <span class="roll"><span>Jetzt bestellen</span><span aria-hidden="true">Jetzt bestellen</span></span>
+      </a>
+      <button class="pill pill--outline" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">
+        <span class="roll"><span class="menu-label">Menü</span><span aria-hidden="true" class="menu-label">Menü</span></span>
+        <span class="nav__burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <nav class="menu-panel" id="menu-panel" aria-label="Hauptmenü">
+    <ul>
+      <li><a href="#top">Start</a></li>
+      <li><a href="speisekarte.html">Speisekarte</a></li>
+      <li><a href="#wings">Wings</a></li>
+      <li><a href="#buckets">Buckets</a></li>
+      <li><a href="#bestellen">Bestellen</a></li>
+      <li><a href="#besuch">Besuch</a></li>
+    </ul>
+    <div class="menu-panel__meta">
+      Merkurstraße 13 · 67663 Kaiserslautern<br>
+      Täglich 12–22 Uhr · <a href="tel:+496313107985">0631 3107985</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero bg-cream" id="top" aria-labelledby="hero-title">
+      <div class="hero__stage">
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__eyebrow" data-intro><span>Fried Chicken &amp; Burger</span> <span>in Kaiserslautern</span></span>
+          <span class="hero__big" data-hero-big><span class="part">Knock</span><span class="part">out</span></span>
+        </h1>
+        <div class="hero__burger" data-intro data-float>
+          <img src="assets/img/cut-us-burger.webp" width="774" height="760" alt="US Burger von Chickago Boys mit Cheddar, Spiegelei und Bacon" fetchpriority="high">
+        </div>
+        <div class="hero__wm" data-intro aria-hidden="true"><div class="wm-fill"><span class="wm-mask wm-mask--block"></span></div></div>
+        <span class="sticker hero__st1" data-intro data-sticker>Knusprig<br>paniert</span>
+        <span class="sticker sticker--red hero__st2" data-intro data-sticker>Mild oder<br>scharf?</span>
+        <img class="hero__rooster die-cut" src="assets/img/rooster.svg" alt="" width="179" height="264" data-intro data-sticker>
+      </div>
+      <div class="hero__bottom">
+        <p class="lead" data-intro>Crispy Tenders, Wings mit Punch und Burger, die dich <strong>umhauen</strong>. Frisch aus der Küche in der Merkurstraße 13 – vor Ort, zum Abholen oder geliefert.</p>
+        <div class="hero__cta" data-intro>
+          <span class="open-badge" data-open-badge>Öffnungszeiten: täglich 12–22 Uhr</span>
+          <a class="btn" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg>Jetzt bestellen</a>
+          <a class="btn btn--ghost" href="speisekarte.html">Speisekarte</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker-clip" aria-hidden="true">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>Chicken Wings</span><span>Crispy Tenders</span><span>Beef Burger</span><span>Chicken Burger</span><span>Wraps</span><span>Cheesy Fries</span><span>Buckets</span><span>Merkurstraße 13</span>
+        <span>Chicken Wings</span><span>Crispy Tenders</span><span>Beef Burger</span><span>Chicken Burger</span><span>Wraps</span><span>Cheesy Fries</span><span>Buckets</span><span>Merkurstraße 13</span>
+      </div>
+    </div>
+    </div>
+
+    <!-- ============ CHAMPIONS ============ -->
+    <section class="section bg-cream champs" aria-labelledby="champs-title">
+      <div class="wrap">
+        <span class="kicker" data-reveal>Die Favoriten</span>
+        <h2 class="display h2 stroke" id="champs-title" data-pop>Champions der Karte</h2>
+        <p class="lead" data-reveal>Knusprig, saftig, ordentlich belegt: drei Gerichte, mit denen du nichts falsch machst.</p>
+        <a class="btn" href="speisekarte.html" data-reveal>Ganze Karte ansehen <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+
+        <div class="champs__cards">
+          <a class="photo-card" href="speisekarte.html#beef-burger" data-reveal>
+            <div class="photo-card__img"><img src="assets/img/foto-us-burger.webp" width="900" height="900" loading="lazy" alt="US Burger mit Cheddar, Ei, Bacon und BBQ-Soße auf einem Holzbrett"></div>
+            <span class="price photo-card__price">13,50 €</span>
+            <span class="photo-card__label"><span class="sticker">US Burger</span></span>
+          </a>
+          <a class="photo-card" href="speisekarte.html#chicken-burger" data-reveal>
+            <div class="photo-card__img"><img src="assets/img/foto-chicken-honey-mustard.webp" width="900" height="900" loading="lazy" alt="Chicken Burger Home Style mit Honey-Mustard-Soße und Bacon"></div>
+            <span class="price photo-card__price">12,50 €</span>
+            <span class="photo-card__label"><span class="sticker sticker--red">Honey Mustard Bacon</span></span>
+          </a>
+          <a class="photo-card" href="speisekarte.html#wraps" data-reveal>
+            <div class="photo-card__img"><img src="assets/img/foto-chicken-wrap.webp" width="900" height="900" loading="lazy" alt="Chicken Wrap Chickago-Boys mit zwei Crispy-Filets, aufgeschnitten"></div>
+            <span class="price photo-card__price">9,50 €</span>
+            <span class="photo-card__label"><span class="sticker">Chickago Wrap</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WINGS ============ -->
+    <section class="section bg-red on-red wings" id="wings" aria-labelledby="wings-title">
+      <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 70C160 18 330 20 520 62s380 70 560 30 280-66 360-42v72H0Z"/></svg></div>
+      <div class="wrap">
+        <div class="wings__head">
+          <div>
+            <span class="kicker kicker--yellow" data-reveal>Round 1</span>
+            <h2 class="display h2 stroke" id="wings-title" data-pop>Wings mit Punch</h2>
+            <p class="lead wings__lead" data-reveal><em>How many Wings can you handle?</em><br>Knusprig frittiert und in einer von vier Saucen geschwenkt – oder klassisch mit Sauce nach Wahl. Jede Portion gibt’s mild oder scharf.</p>
+          </div>
+          <div class="wings__hero" data-reveal>
+            <img src="assets/img/cut-chicken-wings.webp" width="1000" height="813" loading="lazy" alt="Ein Berg knuspriger Chicken Wings">
+            <span class="burst" data-sticker><span>K.O.<br>Crunch</span></span>
+            <img class="rooster-st die-cut" src="assets/img/rooster.svg" alt="" width="179" height="264" data-sticker>
+          </div>
+        </div>
+
+        <div class="sauce-grid">
+          <article class="sauce" data-reveal>
+            <div class="sauce__img"><img src="assets/img/cut-buffalo-wings.webp" width="800" height="784" loading="lazy" alt="Buffalo Red Hot Wings mit Dip"></div>
+            <h3>Buffalo Red Hot</h3>
+            <p>Der Klassiker mit Feuer.</p>
+            <span class="price">10 Stück · 14,00 €</span>
+          </article>
+          <article class="sauce" data-reveal>
+            <div class="sauce__img"><img src="assets/img/cut-bbq-wings.webp" width="800" height="830" loading="lazy" alt="Chipotle Honey BBQ Wings mit Dip"></div>
+            <h3>Chipotle Honey BBQ</h3>
+            <p>Rauchig, süß, klebrig gut.</p>
+            <span class="price">10 Stück · 14,00 €</span>
+          </article>
+          <article class="sauce" data-reveal>
+            <div class="sauce__img"><img src="assets/img/cut-teriyaki-wings.webp" width="800" height="789" loading="lazy" alt="Teriyaki Wings mit Dip"></div>
+            <h3>Teriyaki</h3>
+            <p>Glasiert mit Teriyaki-Sauce.</p>
+            <span class="price">10 Stück · 14,00 €</span>
+          </article>
+          <article class="sauce" data-reveal>
+            <div class="sauce__img"><img src="assets/img/cut-sweet-chili-wings.webp" width="800" height="709" loading="lazy" alt="Sweet Chili Wings mit Dip"></div>
+            <h3>Sweet Chili</h3>
+            <p>Süß-scharf geschwenkt.</p>
+            <span class="price">10 Stück · 14,00 €</span>
+          </article>
+        </div>
+
+        <div class="classic-wings" data-reveal>
+          <h3>Chicken Wings<br>Classic</h3>
+          <p>Knusprig, mit Sauce nach Wahl – mild oder scharf.</p>
+          <div class="classic-wings__prices">
+            <span class="price"><small>6 Stück</small>8,50 €</span>
+            <span class="price"><small>10 Stück</small>11,00 €</span>
+            <span class="price"><small>20 Stück</small>22,00 €</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PHOTO BAND ============ -->
+    <div class="band" aria-hidden="true">
+      <div class="wave wave--top"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 0h1440v58c-150 40-330 62-540 30S470 20 300 44 70 96 0 80Z"/></svg></div>
+      <img src="assets/img/foto-menu-tenders.webp" width="1400" height="1400" loading="lazy" alt="" data-parallax>
+      <span class="sticker band__tag" data-sticker>Crispy Tenders<br>ab 9,50 €</span>
+      <div class="wave wave--bottom"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 0h1440v64c-170-40-360-52-560-12S430 104 250 70 60 30 0 48Z"/></svg></div>
+    </div>
+
+    <!-- ============ BUCKETS ============ -->
+    <section class="section bg-ink on-dark buckets" data-nav-dark id="buckets" aria-labelledby="buckets-title">
+      <div class="wrap">
+        <div class="buckets__head">
+          <div>
+            <span class="kicker kicker--yellow" data-reveal>Main Event</span>
+            <h2 class="display h2 stroke" id="buckets-title" data-pop>Fight Night? Bucket Time.</h2>
+          </div>
+          <p class="lead" data-reveal>Für Zocker-Nacht, Betze-Abend oder die ganze Crew: Wings, Filets, Pommes und Cola in einem Bucket. Wings und Filets jeweils mild oder scharf.</p>
+        </div>
+
+        <div class="fight-card-row">
+          <article class="fight-card" data-reveal>
+            <span class="fight-card__class">Mittelgewicht</span>
+            <h3>Bucket</h3>
+            <ul>
+              <li>20 Wings</li><li>5 Filets</li><li>2× Pommes</li><li>1× Coleslaw</li><li>Cola 1,0 l</li>
+            </ul>
+            <div class="fight-card__foot">
+              <span class="price">42,00 €</span>
+              <img src="assets/img/cut-chicken-wings.webp" width="1000" height="813" loading="lazy" alt="">
+            </div>
+          </article>
+          <span class="vs" aria-hidden="true" data-sticker>VS</span>
+          <article class="fight-card" data-reveal>
+            <span class="fight-card__class">Schwergewicht</span>
+            <h3>Party Bucket</h3>
+            <ul>
+              <li>20 Wings</li><li>20 Filets</li><li>4× Pommes</li><li>Cola 1,0 l</li>
+            </ul>
+            <div class="fight-card__foot">
+              <span class="price">68,00 €</span>
+              <img src="assets/img/cut-chicken-wings.webp" width="1000" height="813" loading="lazy" alt="">
+            </div>
+          </article>
+        </div>
+        <p class="buckets__note" data-reveal>Lieber einzeln? Tenders gibt’s ab 5 Stück, Menüs mit Pommes und Coleslaw – <a href="speisekarte.html#chicken">alles auf der Karte</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============ TAKE AWAY ============ -->
+    <section class="section bg-yellow takeaway" id="bestellen" aria-labelledby="takeaway-title">
+      <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 60c200-50 380-50 600-8s420 62 600 22 200-38 240-30v76H0Z"/></svg></div>
+      <div class="wrap">
+        <span class="kicker kicker--ink" data-reveal>Take away</span>
+        <h2 class="display h2 stroke" id="takeaway-title" data-pop>Hol’s dir. Oder lass kommen.</h2>
+        <p class="takeaway__lead lead" data-reveal>Drei Wege zu deinem Chicken – alle starten in der Merkurstraße 13.</p>
+
+        <div class="route" data-route>
+          <svg class="route__svg" aria-hidden="true" preserveAspectRatio="none"><path d=""/></svg>
+          <img class="route__rider die-cut" src="assets/img/rooster.svg" alt="" width="179" height="264">
+          <div class="stops">
+            <article class="stop" data-reveal>
+              <div class="stop__num">01</div>
+              <h3>Vor Ort essen</h3>
+              <p>Restaurant &amp; Bar mit Plätzen drinnen und draußen. Einfach vorbeikommen – mit größerer Gruppe am besten vorher anrufen.</p>
+              <div class="stop__links">
+                <a class="is-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Merkurstra%C3%9Fe+13%2C+67663+Kaiserslautern" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Route planen</a>
+                <a href="tel:+496313107985"><svg aria-hidden="true"><use href="#i-phone"/></svg>Anrufen</a>
+              </div>
+            </article>
+            <article class="stop" data-reveal>
+              <div class="stop__num">02</div>
+              <h3>Abholen</h3>
+              <p>Telefonisch bestellen oder bei Lieferando „Abholung“ wählen – und heiß mitnehmen.</p>
+              <div class="stop__links">
+                <a class="is-primary" href="tel:+496313107985"><svg aria-hidden="true"><use href="#i-phone"/></svg>0631 3107985</a>
+                <a href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">Lieferando</a>
+              </div>
+            </article>
+            <article class="stop" data-reveal>
+              <div class="stop__num">03</div>
+              <h3>Liefern lassen</h3>
+              <p>Keine Lust rauszugehen? Bestell bequem über Lieferando oder Uber Eats und lass es dir bringen.</p>
+              <div class="stop__links">
+                <a class="is-primary" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg>Lieferando</a>
+                <a href="https://www.ubereats.com/de/store/chickago-boys-kaiserslautern/5Yb4dNqDVJOuStkhhdC4qw" target="_blank" rel="noopener">Uber Eats</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section class="section bg-cream visit" id="besuch" aria-labelledby="visit-title">
+      <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 50c180 50 400 60 620 20s420-62 600-30 190 30 220 26v54H0Z"/></svg></div>
+      <div class="wrap visit__grid">
+        <div>
+          <span class="kicker" data-reveal>Ring frei</span>
+          <h2 class="display h2 stroke" id="visit-title" data-pop>Komm vorbei</h2>
+          <p class="lead" data-reveal>Bar &amp; Restaurant mitten in Kaiserslautern: Wings, Burger und kalte Drinks – drinnen oder draußen.</p>
+          <div class="rating" data-reveal>
+            <span class="rating__score">4,4</span>
+            <div>
+              <div class="rating__stars" aria-hidden="true">★★★★☆</div>
+              <div class="rating__meta">aus 1.620 Bewertungen auf <a href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">Lieferando</a><br><small>Stand: 30.09.2026 · Bewertungen erhebt und prüft Lieferando.</small></div>
+            </div>
+          </div>
+          <div class="visit__deco" data-reveal>
+            <img src="assets/img/cut-cheese-burger.webp" width="900" height="656" loading="lazy" alt="Cheese Burger mit Cheddar und karamellisierten Zwiebeln">
+            <span class="sticker sticker--ink" data-sticker>Bar &amp;<br>Restaurant</span>
+          </div>
+        </div>
+        <div>
+          <div class="info-card" data-reveal>
+            <h3>Adresse</h3>
+            <address>Chickago Boys<br>Merkurstraße 13<br>67663 Kaiserslautern</address>
+            <div class="row">
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Merkurstra%C3%9Fe+13%2C+67663+Kaiserslautern" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Route</a>
+              <a class="btn btn--ghost" href="tel:+496313107985"><svg aria-hidden="true"><use href="#i-phone"/></svg>0631 3107985</a>
+            </div>
+          </div>
+          <div class="info-card" data-reveal>
+            <h3>Öffnungszeiten</h3>
+            <span class="open-badge" data-open-badge>täglich 12–22 Uhr</span>
+            <table class="hours" data-hours>
+              <caption class="sr-only">Öffnungszeiten</caption>
+              <tbody>
+                <tr data-day="1"><th scope="row">Montag</th><td>12:00 – 22:00</td></tr>
+                <tr data-day="2"><th scope="row">Dienstag</th><td>12:00 – 22:00</td></tr>
+                <tr data-day="3"><th scope="row">Mittwoch</th><td>12:00 – 22:00</td></tr>
+                <tr data-day="4"><th scope="row">Donnerstag</th><td>12:00 – 22:00</td></tr>
+                <tr data-day="5"><th scope="row">Freitag</th><td>12:00 – 22:00</td></tr>
+                <tr data-day="6"><th scope="row">Samstag</th><td>12:00 – 22:00</td></tr>
+                <tr data-day="0"><th scope="row">Sonntag</th><td>12:00 – 22:00</td></tr>
+              </tbody>
+            </table>
+            <p class="note">An Feiertagen können die Zeiten abweichen. Liefer- und Abholzeiten siehst du direkt bei Lieferando.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section bg-red on-red cta" aria-labelledby="cta-title">
+      <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 64c220-56 420-56 640-6s400 58 580 18 200-36 220-30v74H0Z"/></svg></div>
+      <div class="wrap">
+        <h2 class="display h2 stroke" id="cta-title" data-pop>Hunger?</h2>
+        <img class="cta__rooster die-cut" src="assets/img/rooster.svg" width="179" height="264" alt="" data-sticker>
+        <p class="lead" data-reveal>Dann ab in den Ring: jetzt online bestellen oder direkt bei uns anrufen.</p>
+        <div class="cta__buttons" data-reveal>
+          <a class="btn btn--yellow" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg>Jetzt bestellen</a>
+          <a class="btn btn--ghost" href="tel:+496313107985"><svg aria-hidden="true"><use href="#i-phone"/></svg>0631 3107985</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer on-dark" data-nav-dark>
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/rooster.svg" width="179" height="264" alt="">
+          <p>Fried Chicken, Wings &amp; Burger in Kaiserslautern. Bar &amp; Restaurant in der Merkurstraße 13.</p>
+        </div>
+        <div>
+          <h2>Seiten</h2>
+          <ul class="footer__links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="#wings">Wings</a></li>
+            <li><a href="#besuch">Besuch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Kontakt</h2>
+          <ul>
+            <li>Merkurstraße 13<br>67663 Kaiserslautern</li>
+            <li><a href="tel:+496313107985">0631 3107985</a></li>
+            <li>Täglich 12–22 Uhr</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Bestellen &amp; folgen</h2>
+          <ul>
+            <li><a href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">Lieferando</a></li>
+            <li><a href="https://www.ubereats.com/de/store/chickago-boys-kaiserslautern/5Yb4dNqDVJOuStkhhdC4qw" target="_blank" rel="noopener">Uber Eats</a></li>
+            <li><a href="https://www.instagram.com/chickago_boys/" target="_blank" rel="noopener">Instagram @chickago_boys</a></li>
+            <li><a href="https://www.facebook.com/p/Chickago-Boys-61554599980010/" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Chickago Boys · Alle Preise inkl. MwSt.</span>
+        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · Website von <a href="https://webklar.com" target="_blank" rel="noopener">WEBklar</a></span>
+      </div>
+    </div>
+    <div class="footer__giant" aria-hidden="true" data-juggle>
+      <div class="wm-giant"><span class="wm-mask wm-mask--block"></span></div>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g transform="rotate(-40 60 60)" stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><circle cx="52" cy="12" r="8" fill="#fff6e6"/><circle cx="68" cy="12" r="8" fill="#fff6e6"/><rect x="54" y="10" width="12" height="40" rx="5" fill="#fff6e6"/><path d="M60 40c28 0 38 30 32 50-6 20-58 20-64 0-6-20 4-50 32-50Z" fill="#d98a2b"/><path d="M42 64q6-6 12 0m8-6q6-6 12 0M50 82q6-6 12 0m8-4q6-6 12 0" fill="none" stroke="#f5b400" stroke-linecap="round"/></g></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><path d="M30 32c-10 30 10 70 65 74C70 90 55 70 52 40Z" fill="#e0140e"/><path d="M28 34c4-10 16-12 24 6" fill="#3f9b2a"/><path d="M38 22c-2-8 2-14 8-16" fill="none" stroke-linecap="round"/></g><path d="M44 54c2 16 12 30 26 38" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".6"/></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><rect x="34" y="16" width="10" height="48" fill="#ffd21f" transform="rotate(-10 39 40)"/><rect x="48" y="8" width="10" height="56" fill="#ffd21f"/><rect x="62" y="12" width="10" height="52" fill="#ffd21f" transform="rotate(8 67 38)"/><rect x="74" y="18" width="10" height="46" fill="#ffd21f" transform="rotate(16 79 41)"/><path d="M24 48h72l-10 64H34Z" fill="#e0140e"/></g><path d="M44 72q16 12 32 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><path d="M30 70C18 40 40 12 70 14s38 30 28 52c-6 14-18 18-28 16l-4 14H38l-2-16c-3-3-5-6-6-10Z" fill="#e0140e"/><path d="M36 96h32l2 16H34Z" fill="#fff6e6"/><path d="M44 44c8-8 22-8 28 2-12-2-20 2-24 10" fill="#e0140e"/></g><path d="M50 26c10-4 22-4 30 2" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/></svg></span>
+    </div>
+  </footer>
+
+  <div class="orderbar" id="orderbar">
+    <a class="call" href="tel:+496313107985"><svg aria-hidden="true"><use href="#i-phone"/></svg>Anrufen</a>
+    <a class="order" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg>Jetzt bestellen</a>
+  </div>
+</body>
+</html>

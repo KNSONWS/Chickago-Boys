@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <title>Datenschutz – Chickago Boys</title>
+  <meta name="description" content="Datenschutzerklärung von Chickago Boys Fried Chicken & Burger in Kaiserslautern.">
+  <meta name="theme-color" content="#e0140e">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Chickago Boys">
+  <meta property="og:title" content="Datenschutz – Chickago Boys">
+  <meta property="og:description" content="Datenschutzerklärung von Chickago Boys Fried Chicken & Burger in Kaiserslautern.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <link rel="preload" href="assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/titan-one-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function (d) {
+      var h = d.documentElement; h.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('anim');
+      setTimeout(function () { if (!window.gsap) h.classList.remove('anim'); }, 2500);
+    })(document);
+  </script>
+  <script src="assets/js/gsap.min.js" defer></script>
+  <script src="assets/js/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Zm3 0V6.5a4 4 0 0 1 8 0V8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6.6 3.5h2.8l1.4 4.2-2 1.5a12 12 0 0 0 6 6l1.5-2 4.2 1.4v2.8a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4a21 21 0 0 0-2.3-.1c-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html" aria-label="Chickago Boys – Startseite">
+      <img src="assets/img/rooster.svg" alt="" width="40" height="58">
+      <span class="wm wm-mask" aria-hidden="true"></span>
+    </a>
+    <div class="nav__actions">
+      <a class="pill pill--red" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">
+        <span class="roll"><span>Jetzt bestellen</span><span aria-hidden="true">Jetzt bestellen</span></span>
+      </a>
+      <button class="pill pill--outline" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">
+        <span class="roll"><span class="menu-label">Menü</span><span aria-hidden="true" class="menu-label">Menü</span></span>
+        <span class="nav__burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <nav class="menu-panel" id="menu-panel" aria-label="Hauptmenü">
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="speisekarte.html">Speisekarte</a></li>
+      <li><a href="index.html#wings">Wings</a></li>
+      <li><a href="index.html#buckets">Buckets</a></li>
+      <li><a href="index.html#bestellen">Bestellen</a></li>
+      <li><a href="index.html#besuch">Besuch</a></li>
+    </ul>
+    <div class="menu-panel__meta">
+      Merkurstraße 13 · 67663 Kaiserslautern<br>
+      Täglich 12–22 Uhr · <a href="tel:+496313107985">0631 3107985</a>
+    </div>
+  </nav>
+
+  <main id="main" class="legal">
+    <div class="wrap">
+      <span class="kicker">Rechtliches</span>
+      <h1 class="display stroke">Datenschutz</h1>
+      <div class="legal__body">
+        <p class="draft-box">Entwurf: Die gelb markierten Angaben ergänzen wir vor der Veröffentlichung. Der Text wird vor dem Livegang rechtlich geprüft.</p>
+
+        <h2>1. Verantwortlicher</h2>
+        <p><span class="fill">[Vor- und Nachname des Inhabers bzw. Name der Gesellschaft]</span><br>
+        Chickago Boys Fried Chicken &amp; Burger<br>
+        Merkurstraße 13, 67663 Kaiserslautern<br>
+        Telefon: <a href="tel:+496313107985">0631 3107985</a> · E-Mail: <span class="fill">[E-Mail-Adresse]</span></p>
+
+        <h2>2. Das Wichtigste in Kürze</h2>
+        <p>Diese Website setzt keine Cookies, nutzt keine Analyse- oder Tracking-Werkzeuge und lädt keine Inhalte von Drittanbietern nach. Schriften, Bilder und Skripte liegen auf unserem eigenen Webspace. Ein Cookie-Banner ist deshalb nicht nötig.</p>
+
+        <h2>3. Hosting und Server-Logfiles</h2>
+        <p>Beim Aufruf der Website erfasst der Server unseres Hosters automatisch technische Daten, die dein Browser übermittelt: IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Seite, Referrer-URL, Browsertyp und Betriebssystem. Diese Daten brauchen wir, um die Website auszuliefern und ihre Sicherheit und Stabilität zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Die Logfiles werden nach <span class="fill">[Anzahl]</span> Tagen gelöscht.</p>
+        <p>Hoster: <span class="fill">[Name und Anschrift des Hosters]</span>. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
+
+        <h2>4. Kontakt per Telefon oder E-Mail</h2>
+        <p>Wenn du uns anrufst oder schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten, etwa eine Reservierung oder eine Frage zu Allergenen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern es um eine Bestellung oder Reservierung geht, sonst Art. 6 Abs. 1 lit. f DSGVO. Wir löschen die Daten, sobald die Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+        <h2>5. Bestellungen über Lieferando und Uber Eats</h2>
+        <p>Online-Bestellungen laufen über die Plattformen Lieferando und Uber Eats. Für die Bestellung gelten deren Datenschutzhinweise. Von der Plattform erhalten wir nur die Daten, die wir für Zubereitung, Abholung oder Lieferung brauchen, zum Beispiel Name, Lieferadresse, Telefonnummer und Bestellinhalt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+        <h2>6. Links zu anderen Anbietern</h2>
+        <p>Auf dieser Website verlinken wir auf Lieferando, Uber Eats, Google Maps, Instagram und Facebook. Das sind einfache Links: Erst wenn du darauf klickst, verlässt du unsere Website und der jeweilige Anbieter erhält Daten von dir. Dafür gelten die Datenschutzhinweise des Anbieters.</p>
+
+        <h2>7. Deine Rechte</h2>
+        <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (Art. 21). Wende dich dafür einfach an die oben genannten Kontaktdaten.</p>
+        <p>Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz, Hintere Bleiche 34, 55116 Mainz, <a href="https://www.datenschutz.rlp.de" target="_blank" rel="noopener">www.datenschutz.rlp.de</a>.</p>
+
+        <p class="note">Stand: <span class="fill">[Datum der Veröffentlichung]</span></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer on-dark" data-nav-dark>
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/rooster.svg" width="179" height="264" alt="">
+          <p>Fried Chicken, Wings &amp; Burger in Kaiserslautern. Bar &amp; Restaurant in der Merkurstraße 13.</p>
+        </div>
+        <div>
+          <h2>Seiten</h2>
+          <ul class="footer__links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="index.html#wings">Wings</a></li>
+            <li><a href="index.html#besuch">Besuch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Kontakt</h2>
+          <ul>
+            <li>Merkurstraße 13<br>67663 Kaiserslautern</li>
+            <li><a href="tel:+496313107985">0631 3107985</a></li>
+            <li>Täglich 12–22 Uhr</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Bestellen &amp; folgen</h2>
+          <ul>
+            <li><a href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">Lieferando</a></li>
+            <li><a href="https://www.ubereats.com/de/store/chickago-boys-kaiserslautern/5Yb4dNqDVJOuStkhhdC4qw" target="_blank" rel="noopener">Uber Eats</a></li>
+            <li><a href="https://www.instagram.com/chickago_boys/" target="_blank" rel="noopener">Instagram @chickago_boys</a></li>
+            <li><a href="https://www.facebook.com/p/Chickago-Boys-61554599980010/" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Chickago Boys · Alle Preise inkl. MwSt.</span>
+        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · Website von <a href="https://webklar.com" target="_blank" rel="noopener">WEBklar</a></span>
+      </div>
+    </div>
+    <div class="footer__giant" aria-hidden="true" data-juggle>
+      <div class="wm-giant"><span class="wm-mask wm-mask--block"></span></div>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g transform="rotate(-40 60 60)" stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><circle cx="52" cy="12" r="8" fill="#fff6e6"/><circle cx="68" cy="12" r="8" fill="#fff6e6"/><rect x="54" y="10" width="12" height="40" rx="5" fill="#fff6e6"/><path d="M60 40c28 0 38 30 32 50-6 20-58 20-64 0-6-20 4-50 32-50Z" fill="#d98a2b"/><path d="M42 64q6-6 12 0m8-6q6-6 12 0M50 82q6-6 12 0m8-4q6-6 12 0" fill="none" stroke="#f5b400" stroke-linecap="round"/></g></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><path d="M30 32c-10 30 10 70 65 74C70 90 55 70 52 40Z" fill="#e0140e"/><path d="M28 34c4-10 16-12 24 6" fill="#3f9b2a"/><path d="M38 22c-2-8 2-14 8-16" fill="none" stroke-linecap="round"/></g><path d="M44 54c2 16 12 30 26 38" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".6"/></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><rect x="34" y="16" width="10" height="48" fill="#ffd21f" transform="rotate(-10 39 40)"/><rect x="48" y="8" width="10" height="56" fill="#ffd21f"/><rect x="62" y="12" width="10" height="52" fill="#ffd21f" transform="rotate(8 67 38)"/><rect x="74" y="18" width="10" height="46" fill="#ffd21f" transform="rotate(16 79 41)"/><path d="M24 48h72l-10 64H34Z" fill="#e0140e"/></g><path d="M44 72q16 12 32 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><path d="M30 70C18 40 40 12 70 14s38 30 28 52c-6 14-18 18-28 16l-4 14H38l-2-16c-3-3-5-6-6-10Z" fill="#e0140e"/><path d="M36 96h32l2 16H34Z" fill="#fff6e6"/><path d="M44 44c8-8 22-8 28 2-12-2-20 2-24 10" fill="#e0140e"/></g><path d="M50 26c10-4 22-4 30 2" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/></svg></span>
+    </div>
+  </footer>
+
+  <div class="orderbar" id="orderbar">
+    <a class="call" href="tel:+496313107985"><svg aria-hidden="true"><use href="#i-phone"/></svg>Anrufen</a>
+    <a class="order" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg>Jetzt bestellen</a>
+  </div>
+</body>
+</html>

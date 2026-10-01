@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speisekarte – Chickago Boys Kaiserslautern</title>
+  <meta name="description" content="Die Speisekarte von Chickago Boys: Chicken Wings in vier Saucen, Crispy Tenders, Buckets, Beef & Chicken Burger, Wraps, Salate und Sides – mit Preisen.">
+  <meta name="theme-color" content="#e0140e">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Chickago Boys">
+  <meta property="og:title" content="Speisekarte – Chickago Boys Kaiserslautern">
+  <meta property="og:description" content="Die Speisekarte von Chickago Boys: Chicken Wings in vier Saucen, Crispy Tenders, Buckets, Beef & Chicken Burger, Wraps, Salate und Sides – mit Preisen.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <link rel="preload" href="assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/titan-one-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/cut-steakhouse-burger.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function (d) {
+      var h = d.documentElement; h.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('anim');
+      setTimeout(function () { if (!window.gsap) h.classList.remove('anim'); }, 2500);
+    })(document);
+  </script>
+  <script src="assets/js/gsap.min.js" defer></script>
+  <script src="assets/js/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Zm3 0V6.5a4 4 0 0 1 8 0V8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6.6 3.5h2.8l1.4 4.2-2 1.5a12 12 0 0 0 6 6l1.5-2 4.2 1.4v2.8a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4a21 21 0 0 0-2.3-.1c-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html" aria-label="Chickago Boys – Startseite">
+      <img src="assets/img/rooster.svg" alt="" width="40" height="58">
+      <span class="wm wm-mask" aria-hidden="true"></span>
+    </a>
+    <div class="nav__actions">
+      <a class="pill pill--red" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">
+        <span class="roll"><span>Jetzt bestellen</span><span aria-hidden="true">Jetzt bestellen</span></span>
+      </a>
+      <button class="pill pill--outline" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">
+        <span class="roll"><span class="menu-label">Menü</span><span aria-hidden="true" class="menu-label">Menü</span></span>
+        <span class="nav__burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <nav class="menu-panel" id="menu-panel" aria-label="Hauptmenü">
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="speisekarte.html">Speisekarte</a></li>
+      <li><a href="index.html#wings">Wings</a></li>
+      <li><a href="index.html#buckets">Buckets</a></li>
+      <li><a href="index.html#bestellen">Bestellen</a></li>
+      <li><a href="index.html#besuch">Besuch</a></li>
+    </ul>
+    <div class="menu-panel__meta">
+      Merkurstraße 13 · 67663 Kaiserslautern<br>
+      Täglich 12–22 Uhr · <a href="tel:+496313107985">0631 3107985</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-hero bg-ink on-dark" data-nav-dark aria-labelledby="page-title">
+      <div class="wrap">
+        <span class="kicker kicker--yellow">Speisekarte</span>
+        <h1 class="display stroke" id="page-title" data-hero-big>Die Karte</h1>
+        <p class="lead">Wings, Tenders, Burger, Wraps und Sides – alles mild oder scharf, zum Mitnehmen, geliefert oder direkt bei uns.</p>
+      </div>
+      <div class="page-hero__img"><img src="assets/img/cut-steakhouse-burger.webp" width="900" height="669" alt="Steakhouse Burger mit Pepper-Jack-Käse und Bacon"></div>
+      <span class="sticker sticker--red page-hero__st" data-sticker>Mild oder<br>scharf?</span>
+    </section>
+
+    <nav class="cat-nav" aria-label="Kategorien der Speisekarte">
+      <ul>
+        <li><a href="#chicken">Chicken</a></li>
+        <li><a href="#chicken-burger">Chicken Burger</a></li>
+        <li><a href="#beef-burger">Beef Burger</a></li>
+        <li><a href="#menues">Menüs</a></li>
+        <li><a href="#wraps">Wraps</a></li>
+        <li><a href="#salate">Salate</a></li>
+        <li><a href="#beilagen">Beilagen</a></li>
+        <li><a href="#saucen">Saucen</a></li>
+        <li><a href="#getraenke">Getränke</a></li>
+        <li><a href="#dessert">Dessert</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrap">
+      <!-- CHICKEN -->
+      <section class="menu-cat" id="chicken" aria-labelledby="h-chicken">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-chicken" data-pop>Chicken</h2>
+          <p>Alle Chicken-Gerichte bekommst du im Schärfegrad deiner Wahl: <strong>mild oder scharf</strong> – ohne Aufpreis.</p>
+        </div>
+        <div class="dish-grid">
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-chicken-wings.webp" width="1000" height="813" loading="lazy" alt="Knusprige Chicken Wings"></div>
+            <div class="dish__body">
+              <h3>Chicken Wings</h3>
+              <p>Knusprig, mit Sauce nach Wahl.</p>
+              <div class="variants"><span>6 Stück · 8,50 €</span><span>10 Stück · 11,00 €</span><span>20 Stück · 22,00 €</span></div>
+            </div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-buffalo-wings.webp" width="800" height="784" loading="lazy" alt="Buffalo Red Hot Wings mit Dip"></div>
+            <div class="dish__body">
+              <div class="dish__row"><h3>Buffalo Red Hot Wings</h3><span class="price">14,00 €</span></div>
+              <p>10 Stück, in Buffalo-Red-Hot-Sauce.</p>
+            </div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-bbq-wings.webp" width="800" height="830" loading="lazy" alt="Chipotle Honey BBQ Wings mit Dip"></div>
+            <div class="dish__body">
+              <div class="dish__row"><h3>Chipotle Honey BBQ Wings</h3><span class="price">14,00 €</span></div>
+              <p>10 Stück, in Chipotle-Honey-BBQ-Sauce.</p>
+            </div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-teriyaki-wings.webp" width="800" height="789" loading="lazy" alt="Teriyaki Wings mit Dip"></div>
+            <div class="dish__body">
+              <div class="dish__row"><h3>Teriyaki Wings</h3><span class="price">14,00 €</span></div>
+              <p>10 Stück, in Teriyaki-Sauce.</p>
+            </div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-sweet-chili-wings.webp" width="800" height="709" loading="lazy" alt="Sweet Chili Wings mit Dip"></div>
+            <div class="dish__body">
+              <div class="dish__row"><h3>Sweet Chili Wings</h3><span class="price">14,00 €</span></div>
+              <p>10 Stück, in Sweet-Chili-Sauce.</p>
+            </div>
+          </article>
+          <article class="dish dish--promo" data-reveal>
+            <span class="fight-card__class" style="color:var(--yellow)">Für die ganze Crew</span>
+            <h3>Buckets</h3>
+            <div class="promo-row"><div><strong>Bucket</strong><p>20 Wings, 5 Filets, 2× Pommes, 1× Coleslaw, Cola 1,0 l</p></div><span class="price">42,00 €</span></div>
+            <div class="promo-row"><div><strong>Party Bucket</strong><p>20 Wings, 20 Filets, 4× Pommes, Cola 1,0 l</p></div><span class="price">68,00 €</span></div>
+          </article>
+        </div>
+        <div class="dish-list">
+          <div class="item"><div class="item__row"><h3>Crispy-Chicken Tenders · 5 Stück</h3><span class="item__dots"></span><span class="item__price">9,50 €</span></div><p>Knusprig panierte Hähnchenfilets.</p></div>
+          <div class="item"><div class="item__row"><h3>Crispy-Chicken Tenders · 10 Stück</h3><span class="item__dots"></span><span class="item__price">17,00 €</span></div><p>Knusprig panierte Hähnchenfilets.</p></div>
+          <div class="item"><div class="item__row"><h3>Buffalo Red Hot Tenders · 5 Stück</h3><span class="item__dots"></span><span class="item__price">11,50 €</span></div><p>In Buffalo-Red-Hot-Sauce.</p></div>
+          <div class="item"><div class="item__row"><h3>Chipotle Honey BBQ Tenders · 5 Stück</h3><span class="item__dots"></span><span class="item__price">11,50 €</span></div><p>In Chipotle-Honey-BBQ-Sauce.</p></div>
+          <div class="item"><div class="item__row"><h3>Teriyaki Tenders · 5 Stück</h3><span class="item__dots"></span><span class="item__price">11,50 €</span></div><p>In Teriyaki-Sauce.</p></div>
+        </div>
+      </section>
+
+      <!-- CHICKEN BURGER -->
+      <section class="menu-cat" id="chicken-burger" aria-labelledby="h-cburger">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-cburger" data-pop>Chicken Burger</h2>
+          <p>Alle Chicken Burger mit Hähnchen-Patty, Cheddar, Tomaten und Salat – im Schärfegrad deiner Wahl.</p>
+        </div>
+        <div class="cat-split">
+          <article class="dish" data-reveal>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img src="assets/img/cut-chicken-honey-mustard.webp" width="900" height="734" loading="lazy" alt="Chicken Burger Home Style mit Honey Mustard und Bacon"></div>
+            <div class="dish__body">
+              <div class="dish__row"><h3>Chicken Home Style Honey Mustard Bacon</h3><span class="price">12,50 €</span></div>
+              <p>Cheddar, Bacon, Tomaten, Zwiebeln, Salat, Honey-Mustard-Soße.</p>
+            </div>
+          </article>
+          <div>
+            <div class="dish-list">
+              <div class="item"><div class="item__row"><h3>Teriyaki Chicken Burger</h3><span class="item__dots"></span><span class="item__price">12,50 €</span></div><p>Cheddar, Tomaten, Salat, Teriyaki-Soße.</p></div>
+              <div class="item"><div class="item__row"><h3>Chicken Burger BBQ</h3><span class="item__dots"></span><span class="item__price">12,50 €</span></div><p>Mit Barbecuesauce.</p></div>
+              <div class="item"><div class="item__row"><h3>Chicken Burger</h3><span class="item__dots"></span><span class="item__price">12,50 €</span></div><p>Mit hausgemachter Sauce.</p></div>
+            </div>
+            <div class="menu-extra"><span>Extra Hähnchen-Patty +3,00 €</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEEF BURGER -->
+      <section class="menu-cat" id="beef-burger" aria-labelledby="h-bburger">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-bburger" data-pop>Beef Burger</h2>
+          <p>Alle Burger mit Rindfleisch-Patty, Cheddar, Tomaten, Salat, sauren Gurken und Zwiebeln.</p>
+        </div>
+        <div class="dish-grid dish-grid--4">
+          <article class="dish" data-reveal>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img src="assets/img/cut-us-burger.webp" width="774" height="760" loading="lazy" alt="US Burger mit Ei und Bacon"></div>
+            <div class="dish__body"><div class="dish__row"><h3>US Burger</h3><span class="price">13,50 €</span></div><p>Cheddar, Ei, Bacon, karamellisierte Zwiebeln, BBQ-Soße.</p></div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-steakhouse-burger.webp" width="900" height="669" loading="lazy" alt="Steakhouse Burger"></div>
+            <div class="dish__body"><div class="dish__row"><h3>Steakhouse Burger</h3><span class="price">13,50 €</span></div><p>Pepper-Jack-Käse, Bacon, karamellisierte Zwiebeln, Steakhouse-Soße.</p></div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img src="assets/img/cut-cheese-burger.webp" width="900" height="656" loading="lazy" alt="Cheese Burger"></div>
+            <div class="dish__body"><div class="dish__row"><h3>Cheese Burger</h3><span class="price">12,50 €</span></div><p>Cheddar, karamellisierte Zwiebeln, Ketchup, Mayonnaise.</p></div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-hamburger.webp" width="900" height="648" loading="lazy" alt="Hamburger"></div>
+            <div class="dish__body"><div class="dish__row"><h3>Hamburger</h3><span class="price">11,50 €</span></div><p>Karamellisierte Zwiebeln, Ketchup, Mayonnaise.</p></div>
+          </article>
+        </div>
+        <div class="dish-list">
+          <div class="item"><div class="item__row"><h3>Teriyaki Burger</h3><span class="item__dots"></span><span class="item__price">12,50 €</span></div><p>Pepper-Jack-Käse, Bacon, karamellisierte Zwiebeln, Teriyaki-Soße.</p></div>
+          <div class="item"><div class="item__row"><h3>Mexico Burger</h3><span class="item__dots"></span><span class="item__price">12,50 €</span></div><p>Pepper-Jack-Käse, Jalapeños, hausgemachte Avocado-Soße.</p></div>
+          <div class="item"><div class="item__row"><h3>Mushroom Burger</h3><span class="item__dots"></span><span class="item__price">12,50 €</span></div><p>Champignons, hausgemachte Sauce, Cheddar, karamellisierte Zwiebeln.</p></div>
+          <div class="item"><div class="item__row"><h3>Chili Cheese Burger</h3><span class="item__dots"></span><span class="item__price">12,50 €</span></div><p>Cheddar, Jalapeños, Chili-Cheese-Soße.</p></div>
+          <div class="item"><div class="item__row"><h3>Veggie Burger</h3><span class="item__dots"></span><span class="item__price">10,50 €</span></div><p>Vegetarisches Patty statt Rindfleisch, hausgemachte Sauce.</p></div>
+        </div>
+        <div class="menu-extra"><span>Extra-Patty +3,00 €</span><span>Vegetarisches Extra-Patty +3,00 €</span></div>
+      </section>
+
+      <!-- MENÜS -->
+      <section class="menu-cat" id="menues" aria-labelledby="h-menues">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-menues" data-pop>Menüs</h2>
+          <p>Mit Pommes und Coleslaw – mild oder scharf.</p>
+        </div>
+        <div class="dish-list">
+          <div class="item"><div class="item__row"><h3>Menü Crispy-Chicken Tenders · 5 Stück</h3><span class="item__dots"></span><span class="item__price">14,45 €</span></div><p>Crispy-Chicken-Filets, Pommes, Coleslaw.</p></div>
+          <div class="item"><div class="item__row"><h3>Menü Crispy-Chicken Tenders · 10 Stück</h3><span class="item__dots"></span><span class="item__price">21,95 €</span></div><p>Crispy-Chicken-Filets, Pommes, Coleslaw.</p></div>
+          <div class="item"><div class="item__row"><h3>Menü Chicken Wings · 6 Stück</h3><span class="item__dots"></span><span class="item__price">13,45 €</span></div><p>Chicken Wings, Pommes, Coleslaw.</p></div>
+          <div class="item"><div class="item__row"><h3>Menü Chicken Wings · 10 Stück</h3><span class="item__dots"></span><span class="item__price">15,95 €</span></div><p>Chicken Wings, Pommes, Coleslaw.</p></div>
+        </div>
+      </section>
+
+      <!-- WRAPS -->
+      <section class="menu-cat" id="wraps" aria-labelledby="h-wraps">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-wraps" data-pop>Wraps</h2>
+          <p>In der Weizen-Tortilla, mit knusprigem Crispy-Filet.</p>
+        </div>
+        <div class="cat-split">
+          <article class="dish" data-reveal>
+            <div class="dish__media"><span class="sticker dish__badge">Beliebt</span><img src="assets/img/cut-chicken-wrap.webp" width="800" height="800" loading="lazy" alt="Chicken Wrap Chickago-Boys, aufgeschnitten"></div>
+            <div class="dish__body"><div class="dish__row"><h3>Chicken Wrap Chickago-Boys</h3><span class="price">9,50 €</span></div><p>2 knusprige Crispy-Filets, Cheddar, Tomaten, Salat, hausgemachte Sauce.</p></div>
+          </article>
+          <div class="dish-list">
+            <div class="item"><div class="item__row"><h3>Caesar Wrap</h3><span class="item__dots"></span><span class="item__price">9,50 €</span></div><p>Knuspriges Crispy-Filet, würziger Hartkäse, Croutons, Tomaten, Salat, Caesar-Soße.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SALATE -->
+      <section class="menu-cat" id="salate" aria-labelledby="h-salate">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-salate" data-pop>Salate</h2>
+          <p>Alle Salate mit Tomaten, Gurken und Croutons. Dressing: Caesar, Balsamico oder ohne.</p>
+        </div>
+        <div class="dish-list">
+          <div class="item"><div class="item__row"><h3>Caesar Chicken Salat</h3><span class="item__dots"></span><span class="item__price">10,50 €</span></div><p>Käse, Croutons, Hähnchenbrustfilet.</p></div>
+          <div class="item"><div class="item__row"><h3>Fitness Salat</h3><span class="item__dots"></span><span class="item__price">11,50 €</span></div><p>Hähnchenbrustfilet, Oliven, Mais, Gurken, Tomaten, Blattsalat.</p></div>
+          <div class="item"><div class="item__row"><h3>Gemischter Salat</h3><span class="item__dots"></span><span class="item__price">7,50 €</span></div><p>Blattsalat, Tomaten, Gurken, Mais.</p></div>
+        </div>
+      </section>
+
+      <!-- BEILAGEN -->
+      <section class="menu-cat" id="beilagen" aria-labelledby="h-beilagen">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-beilagen" data-pop>Beilagen</h2>
+          <p>Der perfekte Sidekick für Wings und Burger.</p>
+        </div>
+        <div class="dish-grid dish-grid--2">
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-chili-cheese-fries.webp" width="700" height="700" loading="lazy" alt="Jalapeños Chili Cheese Fries"></div>
+            <div class="dish__body"><div class="dish__row"><h3>Jalapeños Chili Cheese Fries</h3><span class="price">7,00 €</span></div><p>Pommes mit Chili-Käse-Sauce und Jalapeños.</p></div>
+          </article>
+          <article class="dish" data-reveal>
+            <div class="dish__media"><img src="assets/img/cut-cheesy-bacon-fries.webp" width="700" height="700" loading="lazy" alt="Cheesy Bacon Fries"></div>
+            <div class="dish__body"><div class="dish__row"><h3>Cheesy Bacon Fries</h3><span class="price">7,00 €</span></div><p>Pommes mit Käse und Bacon.</p></div>
+          </article>
+        </div>
+        <div class="dish-list">
+          <div class="item"><div class="item__row"><h3>Pommes frites</h3><span class="item__dots"></span><span class="item__price">4,00 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Süßkartoffel-Pommes <span class="tag">Beliebt</span></h3><span class="item__dots"></span><span class="item__price">5,00 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Onion Rings</h3><span class="item__dots"></span><span class="item__price">6,00 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Mozzarella Sticks</h3><span class="item__dots"></span><span class="item__price">7,00 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Krautsalat</h3><span class="item__dots"></span><span class="item__price">4,00 €</span></div><p>Weißkohl, Rotkohl.</p></div>
+        </div>
+      </section>
+
+      <!-- SAUCEN -->
+      <section class="menu-cat" id="saucen" aria-labelledby="h-saucen">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-saucen" data-pop>Saucen &amp; Dips</h2>
+          <p>Zum Dippen, Tunken und Nachlegen.</p>
+        </div>
+        <div class="sauce-chips" data-reveal>
+          <span>Ranch <b>1,50 €</b></span><span>Curry Mango <b>1,50 €</b></span><span>Barbecuesauce <b>1,50 €</b></span><span>Sweet-Chilisauce <b>1,50 €</b></span><span>Cheddarsauce <b>1,50 €</b></span><span>Chili-Cheesesauce <b>1,50 €</b></span><span>Süß-Sauer-Sauce <b>1,50 €</b></span><span>Caesar Dressing <b>1,50 €</b></span><span>Balsamico Dressing <b>1,50 €</b></span><span>Ketchup <b>1,00 €</b></span><span>Mayonnaise <b>1,00 €</b></span>
+        </div>
+      </section>
+
+      <!-- GETRÄNKE -->
+      <section class="menu-cat" id="getraenke" aria-labelledby="h-getraenke">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-getraenke" data-pop>Getränke</h2>
+          <p>Kalt, groß und zum Teilen. Bier, Wein und Cocktails gibt’s bei uns an der Bar.</p>
+        </div>
+        <div class="dish-list">
+          <div class="item"><div class="item__row"><h3>Home Made Peach Iced Tea · 1,0 l</h3><span class="item__dots"></span><span class="item__price">9,50 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Home Made Lemon Iced Tea · 1,0 l</h3><span class="item__dots"></span><span class="item__price">9,50 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Coca-Cola · 1,0 l</h3><span class="item__dots"></span><span class="item__price">4,70 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Coca-Cola Zero · 1,0 l</h3><span class="item__dots"></span><span class="item__price">4,70 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Fanta Orange · 1,0 l</h3><span class="item__dots"></span><span class="item__price">4,70 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Mezzo Mix · 1,0 l</h3><span class="item__dots"></span><span class="item__price">4,70 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Sprite · 1,0 l</h3><span class="item__dots"></span><span class="item__price">4,70 €</span></div></div>
+          <div class="item"><div class="item__row"><h3>Red Bull · 0,25 l</h3><span class="item__dots"></span><span class="item__price">3,50 €</span></div></div>
+        </div>
+      </section>
+
+      <!-- DESSERT -->
+      <section class="menu-cat" id="dessert" aria-labelledby="h-dessert">
+        <div class="menu-cat__head">
+          <h2 class="display stroke" id="h-dessert" data-pop>Dessert</h2>
+          <p>Für den süßen Knockout zum Schluss.</p>
+        </div>
+        <div class="dish-list">
+          <div class="item"><div class="item__row"><h3>New York Cheesecake</h3><span class="item__dots"></span><span class="item__price">5,00 €</span></div><p>Cremiger Käsekuchen.</p></div>
+        </div>
+      </section>
+
+      <aside class="only-here" data-reveal>
+        <img class="die-cut" src="assets/img/rooster.svg" width="179" height="264" alt="">
+        <div>
+          <h2>Mehr im Restaurant</h2>
+          <p>Vor Ort gibt’s noch mehr als online: Ribs, Steaks und Drinks von der Bar. Komm vorbei in die Merkurstraße 13.</p>
+          <p><a class="btn btn--yellow" href="index.html#besuch">Anfahrt &amp; Zeiten</a></p>
+        </div>
+      </aside>
+
+      <div class="legal-note" data-reveal>
+        <h2>Allergene &amp; Zusatzstoffe</h2>
+        <p>Informationen zu Allergenen und kennzeichnungspflichtigen Zusatzstoffen bekommst du jederzeit bei uns im Restaurant oder telefonisch unter <a href="tel:+496313107985">0631 3107985</a>. Alle Preise in Euro inklusive gesetzlicher Mehrwertsteuer. Stand: 09/2026.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer on-dark" data-nav-dark>
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/rooster.svg" width="179" height="264" alt="">
+          <p>Fried Chicken, Wings &amp; Burger in Kaiserslautern. Bar &amp; Restaurant in der Merkurstraße 13.</p>
+        </div>
+        <div>
+          <h2>Seiten</h2>
+          <ul class="footer__links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="index.html#wings">Wings</a></li>
+            <li><a href="index.html#besuch">Besuch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Kontakt</h2>
+          <ul>
+            <li>Merkurstraße 13<br>67663 Kaiserslautern</li>
+            <li><a href="tel:+496313107985">0631 3107985</a></li>
+            <li>Täglich 12–22 Uhr</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Bestellen &amp; folgen</h2>
+          <ul>
+            <li><a href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener">Lieferando</a></li>
+            <li><a href="https://www.ubereats.com/de/store/chickago-boys-kaiserslautern/5Yb4dNqDVJOuStkhhdC4qw" target="_blank" rel="noopener">Uber Eats</a></li>
+            <li><a href="https://www.instagram.com/chickago_boys/" target="_blank" rel="noopener">Instagram @chickago_boys</a></li>
+            <li><a href="https://www.facebook.com/p/Chickago-Boys-61554599980010/" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Chickago Boys · Alle Preise inkl. MwSt.</span>
+        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · Website von <a href="https://webklar.com" target="_blank" rel="noopener">WEBklar</a></span>
+      </div>
+    </div>
+    <div class="footer__giant" aria-hidden="true" data-juggle>
+      <div class="wm-giant"><span class="wm-mask wm-mask--block"></span></div>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g transform="rotate(-40 60 60)" stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><circle cx="52" cy="12" r="8" fill="#fff6e6"/><circle cx="68" cy="12" r="8" fill="#fff6e6"/><rect x="54" y="10" width="12" height="40" rx="5" fill="#fff6e6"/><path d="M60 40c28 0 38 30 32 50-6 20-58 20-64 0-6-20 4-50 32-50Z" fill="#d98a2b"/><path d="M42 64q6-6 12 0m8-6q6-6 12 0M50 82q6-6 12 0m8-4q6-6 12 0" fill="none" stroke="#f5b400" stroke-linecap="round"/></g></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><path d="M30 32c-10 30 10 70 65 74C70 90 55 70 52 40Z" fill="#e0140e"/><path d="M28 34c4-10 16-12 24 6" fill="#3f9b2a"/><path d="M38 22c-2-8 2-14 8-16" fill="none" stroke-linecap="round"/></g><path d="M44 54c2 16 12 30 26 38" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".6"/></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><rect x="34" y="16" width="10" height="48" fill="#ffd21f" transform="rotate(-10 39 40)"/><rect x="48" y="8" width="10" height="56" fill="#ffd21f"/><rect x="62" y="12" width="10" height="52" fill="#ffd21f" transform="rotate(8 67 38)"/><rect x="74" y="18" width="10" height="46" fill="#ffd21f" transform="rotate(16 79 41)"/><path d="M24 48h72l-10 64H34Z" fill="#e0140e"/></g><path d="M44 72q16 12 32 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></span>
+      <span class="juggle"><svg viewBox="0 0 120 120"><g stroke="#150d0c" stroke-width="4" stroke-linejoin="round"><path d="M30 70C18 40 40 12 70 14s38 30 28 52c-6 14-18 18-28 16l-4 14H38l-2-16c-3-3-5-6-6-10Z" fill="#e0140e"/><path d="M36 96h32l2 16H34Z" fill="#fff6e6"/><path d="M44 44c8-8 22-8 28 2-12-2-20 2-24 10" fill="#e0140e"/></g><path d="M50 26c10-4 22-4 30 2" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/></svg></span>
+    </div>
+  </footer>
+
+  <div class="orderbar" id="orderbar">
+    <a class="call" href="tel:+496313107985"><svg aria-hidden="true"><use href="#i-phone"/></svg>Anrufen</a>
+    <a class="order" href="https://www.lieferando.de/speisekarte/chickago-boys" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg>Jetzt bestellen</a>
+  </div>
+</body>
+</html>
