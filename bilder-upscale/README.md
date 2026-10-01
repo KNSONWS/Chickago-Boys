@@ -1,7 +1,12 @@
 # Bilder zum Upscalen
 
+**Zum Generieren mit Nano Banana: [generieren/README.md](generieren/README.md)** (Anleitung, 59 fertige Prompts, vorbereitete Ausgangsfotos).
+
 - `original/` enthält Kopien der Speisenbilder, die auf der Website verwendet werden. Die Seite selbst lädt weiter aus `assets/img/`.
-- `bearbeitet/` ist für die hochskalierten Versionen.
+- `bearbeitet/` ist für die hochskalierten bzw. generierten Versionen.
+- `speisekarte/` enthält die gefundenen Ausgangsfotos pro Gericht, Übersicht in [speisekarte.md](speisekarte.md).
+- `generieren/` enthält alles für die Bildgenerierung.
+- [restaurant-recherche.md](restaurant-recherche.md) ist der Recherche-Bericht zum Restaurant, [nano-banana-prompt.md](nano-banana-prompt.md) der Leitfaden für einheitliche Bilder.
 
 Nicht enthalten sind das Logo (`rooster.svg`, `wordmark.svg`), die Icons (`favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`) und `og-image.jpg`, eine fertige Social-Media-Grafik mit Logo und Text.
 
