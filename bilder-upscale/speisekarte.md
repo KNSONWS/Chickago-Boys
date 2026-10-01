@@ -1,6 +1,6 @@
 # Speisekarte Chickago Boys: komplett, mit Bild pro Gericht
 
-Stand: 01.10.2026 · 15 Kategorien, 70 Positionen · Bilder: 25 von 70 gefunden (Suche läuft noch, Bilder noch nicht unabhängig geprüft)
+Stand: 01.10.2026 · 15 Kategorien, 70 Positionen · Bilder: 28 von 70 im Projekt (Stand der Bildsuche und Generier-Paket: [generieren/README.md](generieren/README.md))
 
 Grundlage: Website-Karte (Lieferando-Stand 30.09.2026), Wolt, speisekarte.de, gastroguide.de, speisekartenweb.de, Instagram/Threads/Facebook, Bewertungsportale. Lieferando und Uber Eats selbst konnten wegen Bot-Schutz nicht abgerufen werden. Details und Quellen: [restaurant-recherche.md](restaurant-recherche.md).
 
@@ -87,7 +87,7 @@ In der Weizen-Tortilla.
 
 | Nr | Gericht | Beschreibung | Preis | Verfügbar | Bild | Herkunft | Prompt-Beschreibung |
 |---|---|---|---|---|---|---|---|
-| 01 | Chicken Wrap Chickago-Boys | 2 knusprige Crispy-Filets, Cheddar, Tomaten, Salat, hausgemachte Sauce. | 9,50 EUR | online & Restaurant | offen | Suche läuft | A grilled wheat tortilla wrap with grill marks, cut diagonally in half to show two crispy breaded chicken fillets, cheddar, tomato, lettuce and creamy house sauce, lying on a wooden board sprinkled with chopped parsley. |
+| 01 | Chicken Wrap Chickago-Boys | 2 knusprige Crispy-Filets, Cheddar, Tomaten, Salat, hausgemachte Sauce. | 9,50 EUR | online & Restaurant | [01-chicken-wrap-chickago-boys.webp](speisekarte/07-wraps/01-chicken-wrap-chickago-boys.webp) | Website-Bestand (Lieferando) | A grilled wheat tortilla wrap with grill marks, cut diagonally in half to show two crispy breaded chicken fillets, cheddar, tomato, lettuce and creamy house sauce, lying on a wooden board sprinkled with chopped parsley. |
 | 02 | Caesar Wrap | Knuspriges Crispy-Filet, würziger Hartkäse, Croutons, Tomaten, Salat, Caesar-Soße. | 9,50 EUR | online & Restaurant | offen | Suche läuft | A wheat tortilla wrap cut in half, filled with a crispy breaded chicken fillet, grated hard cheese, crunchy croutons, tomato, lettuce and creamy Caesar dressing. |
 | 03 | Supreme Wrap | Kalt serviert: Weizentortilla mit Taco-Rindfleisch, Tomaten, Salat, Gouda, Koriander, Guacamole und Sour Cream. | 13,00 EUR | online & Restaurant | offen | Suche läuft | A cold wheat tortilla wrap cut in half, filled with taco-seasoned beef, tomato, lettuce, gouda cheese, fresh coriander, green guacamole and white sour cream. |
 
@@ -115,8 +115,8 @@ Der perfekte Sidekick für Wings und Burger.
 
 | Nr | Gericht | Beschreibung | Preis | Verfügbar | Bild | Herkunft | Prompt-Beschreibung |
 |---|---|---|---|---|---|---|---|
-| 01 | Jalapeños Chili Cheese Fries | Pommes mit Chili-Käse-Sauce und Jalapeños. | 7,00 EUR | online & Restaurant | offen | Suche läuft | French fries in a rectangular grey-blue ceramic dish with handles, drizzled with orange-yellow chili cheese sauce and topped with green jalapeño slices. |
-| 02 | Cheesy Bacon Fries | Pommes mit Käse und Bacon. | 7,00 EUR | online & Restaurant | offen | Suche läuft | French fries in a rectangular grey-blue ceramic dish with handles, covered in melted yellow cheese sauce and crispy bacon strips. |
+| 01 | Jalapeños Chili Cheese Fries | Pommes mit Chili-Käse-Sauce und Jalapeños. | 7,00 EUR | online & Restaurant | [01-jalapenos-chili-cheese-fries.webp](speisekarte/10-beilagen/01-jalapenos-chili-cheese-fries.webp) | Website-Bestand (Lieferando) | French fries in a rectangular grey-blue ceramic dish with handles, drizzled with orange-yellow chili cheese sauce and topped with green jalapeño slices. |
+| 02 | Cheesy Bacon Fries | Pommes mit Käse und Bacon. | 7,00 EUR | online & Restaurant | [02-cheesy-bacon-fries.webp](speisekarte/10-beilagen/02-cheesy-bacon-fries.webp) | Website-Bestand (Lieferando) | French fries in a rectangular grey-blue ceramic dish with handles, covered in melted yellow cheese sauce and crispy bacon strips. |
 | 03 | Pommes frites | Knusprig frittiert. | 4,00 EUR | online & Restaurant | offen | Suche läuft | A portion of crispy golden French fries. |
 | 04 | Süßkartoffel-Pommes | Knusprig frittiert. | 5,00 EUR | online & Restaurant | offen | Suche läuft | A portion of crispy orange sweet potato fries sprinkled with herbs. |
 | 05 | Onion Rings | 6 Stück, knusprig paniert und frittiert. | 6,00 EUR | online & Restaurant | offen | Suche läuft | Six crispy, golden breaded onion rings. |
