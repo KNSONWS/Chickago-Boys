@@ -6,6 +6,7 @@ Stand: 01.10.2026
 
 | Datei / Ordner | Inhalt |
 |---|---|
+| [gemini-prompts-rest.md](gemini-prompts-rest.md) | **Zweiter Durchgang:** die 33 Prompts für alles, was noch fehlt (Stand 02.10.2026). 26 Gerichte sind fertig und auf der Website. |
 | [gemini-prompts.md](gemini-prompts.md) | **Hauptdatei für die Gemini-App:** alle 59 Prompts mit Anleitung, Korrektursätzen und Steingut-Anker |
 | [prompts.md](prompts.md) | 59 fertige Prompts, einer pro Gericht, in Generier-Reihenfolge. Zu jedem steht, welche Bilder angehängt werden und wo das Ergebnis gespeichert wird. |
 | `eingabe/` | 14 vorbereitete Ausgangsfotos: quadratisch, Logo und Gäste weggeschnitten, Freisteller auf Hintergrundgrau gesetzt |

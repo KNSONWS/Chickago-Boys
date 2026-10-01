@@ -694,6 +694,8 @@ body.nav-visible .cat-nav { top: var(--nav-h); }
 }
 .dish__media img { position: absolute; z-index: 1; left: 11%; top: 6%; width: 78%; height: 88%; object-fit: contain; filter: drop-shadow(0 16px 16px rgba(21, 13, 12, .25)); transition: transform .7s var(--ease-pop); }
 .dish:hover .dish__media img { transform: scale(1.06) rotate(-2deg); }
+/* Die neuen Speisenfotos (assets/img/menu/) bringen ihren Kontaktschatten schon mit, deshalb kein zweiter CSS-Schatten */
+.dish__media img.shot, .hero__burger img.shot { filter: none; }
 .dish__badge { position: absolute; z-index: 2; right: calc(var(--pad-x) * .6); top: 14%; font-size: .85rem; --r: 7deg; border-width: 3px; }
 .dish__body { width: 100%; display: flex; flex-direction: column; align-items: center; gap: .75rem; flex: 1; }
 .dish p { font-size: .95rem; margin: 0; opacity: .85; max-width: 34ch; }
